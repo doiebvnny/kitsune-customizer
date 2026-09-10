@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJPW Pet Kitsune Customizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">AJPW FAN TOOL</p>
+      <h1>Pet Kitsune Customizer</h1>
+      <p class="subtitle">Build your dream Kitsune one trait at a time.</p>
+    </div>
+    <button id="resetBtn" class="secondary-btn">Reset</button>
+  </header>
+
+  <main class="app-shell">
+    <section class="preview-card">
+      <div class="preview-stage" id="previewStage">
+        <div class="placeholder-kitsune" id="placeholderKitsune">
+          <div class="placeholder-icon">🦊</div>
+          <strong>Kitsune preview</strong>
+          <span>Images will be added as we build the trait library.</span>
+        </div>
+
+        <!-- Future image layers -->
+        <img id="baseLayer" class="pet-layer" alt="" />
+        <img id="tailLayer" class="pet-layer" alt="" />
+        <img id="patternLayer" class="pet-layer" alt="" />
+        <img id="ruffLayer" class="pet-layer" alt="" />
+        <img id="earLayer" class="pet-layer" alt="" />
+        <img id="maskLayer" class="pet-layer" alt="" />
+      </div>
+
+      <div class="selection-summary">
+        <h2>Your Kitsune</h2>
+        <p id="summaryText"></p>
+      </div>
+    </section>
+
+    <section class="controls-card">
+      <div class="control-group">
+        <label for="tailNumber">Tail Number</label>
+        <select id="tailNumber">
+          <option value="three">Three</option>
+          <option value="five">Five</option>
+          <option value="seven">Seven</option>
+          <option value="one">One</option>
+          <option value="nine">Nine</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="tailType">Tail Type</label>
+        <select id="tailType">
+          <option value="mystic">Mystic</option>
+          <option value="fateful">Fateful</option>
+          <option value="splendorous">Splendorous</option>
+          <option value="valiant">Valiant</option>
+          <option value="hazy">Hazy</option>
+          <option value="endless">Endless</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="pattern">Pattern</label>
+        <select id="pattern">
+          <option value="">Coming soon</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="ruff">Ruff</label>
+        <select id="ruff">
+          <option value="">Coming soon</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="ears">Ears</label>
+        <select id="ears">
+          <option value="">Coming soon</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="mask">Mask</label>
+        <select id="mask">
+          <option value="">Coming soon</option>
+        </select>
+      </div>
+
+      <div class="color-grid">
+        <div class="control-group">
+          <label for="primaryColor">Primary Color</label>
+          <input id="primaryColor" type="color" value="#f4f0c4" />
+        </div>
+
+        <div class="control-group">
+          <label for="secondaryColor">Secondary Color</label>
+          <input id="secondaryColor" type="color" value="#6c35c8" />
+        </div>
+
+        <div class="control-group">
+          <label for="tertiaryColor">Tertiary Color</label>
+          <input id="tertiaryColor" type="color" value="#238f5b" />
+        </div>
+
+        <div class="control-group">
+          <label for="eyeColor">Eye Color</label>
+          <input id="eyeColor" type="color" value="#7a2417" />
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="randomizeBtn" class="primary-btn">Randomize</button>
+      </div>
+
+      <p class="helper-text">
+        Image support is already wired in. As we add assets, the preview can load files such as
+        <code>assets/tails/fateful-five.png</code>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Fan-made customizer. Not affiliated with WildWorks or Animal Jam.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
