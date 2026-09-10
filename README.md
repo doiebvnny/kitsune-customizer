@@ -1,32 +1,27 @@
-# AJPW Pet Kitsune Customizer
+# AJPW Pet Kitsune Customizer — v2
 
-A starter fan-made customizer for Pet Kitsunes in Animal Jam: Play Wild.
+This version uses a game-style interface inspired by the AJPW pet customizer layout.
 
-## Files
-- `index.html` — page structure
-- `style.css` — visual styling
-- `script.js` — customizer logic
-- `assets/` — trait images
+## What's included
+- Wooden customization panels
+- Tail Number selector
+- Tail Type selector
+- Pattern / Ruff / Ears / Mask placeholders
+- Clickable Primary, Secondary, Tertiary, and Eye color boxes
+- Pop-up circular AJPW-style color palette
+- Randomize and Reset buttons
+- Automatic tail image loading from `assets/tails/`
 
-## Tail image naming
-Tail images can be added to `assets/tails/` using this format:
+## Tail asset naming
+Examples:
+- `assets/tails/fateful-three.png`
+- `assets/tails/fateful-five.png`
+- `assets/tails/mystic-nine.png`
 
-- `fateful-three.png`
-- `fateful-five.png`
-- `mystic-one.png`
-- `endless-nine.png`
+## Update your GitHub site
+Replace your current:
+- `index.html`
+- `style.css`
+- `script.js`
 
-The website automatically checks for the matching file when the user changes Tail Type or Tail Number.
-
-## Run locally
-Open `index.html` in a browser.
-
-## Publish with GitHub Pages
-1. Create a new GitHub repository.
-2. Upload all files and folders from this project.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)` folder.
-6. Save. GitHub will give you a public website URL.
-
-Fan-made project; not affiliated with WildWorks or Animal Jam.
+with the files in this version, then commit the changes. GitHub Pages will update automatically.

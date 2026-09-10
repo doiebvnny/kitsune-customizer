@@ -7,127 +7,131 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div>
-      <p class="eyebrow">AJPW FAN TOOL</p>
-      <h1>Pet Kitsune Customizer</h1>
-      <p class="subtitle">Build your dream Kitsune one trait at a time.</p>
-    </div>
-    <button id="resetBtn" class="secondary-btn">Reset</button>
-  </header>
+  <main class="page">
+    <header class="title-banner wood-panel">
+      <div class="title-inner">Kitsune Customizer</div>
+    </header>
 
-  <main class="app-shell">
-    <section class="preview-card">
-      <div class="preview-stage" id="previewStage">
-        <div class="placeholder-kitsune" id="placeholderKitsune">
-          <div class="placeholder-icon">🦊</div>
-          <strong>Kitsune preview</strong>
-          <span>Images will be added as we build the trait library.</span>
+    <section class="customizer-layout">
+      <div class="controls-column">
+        <section class="wood-panel control-panel">
+          <h2>Tail Number</h2>
+          <div class="choice-row" id="tailNumberChoices">
+            <button class="choice-tile selected" data-value="three" title="Three tails">3</button>
+            <button class="choice-tile" data-value="five" title="Five tails">5</button>
+            <button class="choice-tile" data-value="seven" title="Seven tails">7</button>
+            <button class="choice-tile" data-value="one" title="One tail">1</button>
+            <button class="choice-tile" data-value="nine" title="Nine tails">9</button>
+          </div>
+        </section>
+
+        <section class="wood-panel control-panel">
+          <h2>Tail Type</h2>
+          <div class="choice-row" id="tailTypeChoices">
+            <button class="choice-tile selected" data-value="mystic">Mystic</button>
+            <button class="choice-tile" data-value="fateful">Fateful</button>
+            <button class="choice-tile" data-value="splendorous">Splendorous</button>
+            <button class="choice-tile" data-value="valiant">Valiant</button>
+            <button class="choice-tile" data-value="hazy">Hazy</button>
+            <button class="choice-tile" data-value="endless">Endless</button>
+          </div>
+        </section>
+
+        <div class="two-col">
+          <section class="wood-panel control-panel">
+            <h2>Pattern</h2>
+            <div class="choice-row compact">
+              <button class="choice-tile disabled" disabled>Coming soon</button>
+            </div>
+          </section>
+
+          <section class="wood-panel control-panel">
+            <h2>Ruff</h2>
+            <div class="choice-row compact">
+              <button class="choice-tile disabled" disabled>Coming soon</button>
+            </div>
+          </section>
         </div>
 
-        <!-- Future image layers -->
-        <img id="baseLayer" class="pet-layer" alt="" />
-        <img id="tailLayer" class="pet-layer" alt="" />
-        <img id="patternLayer" class="pet-layer" alt="" />
-        <img id="ruffLayer" class="pet-layer" alt="" />
-        <img id="earLayer" class="pet-layer" alt="" />
-        <img id="maskLayer" class="pet-layer" alt="" />
+        <div class="two-col">
+          <section class="wood-panel control-panel">
+            <h2>Ears</h2>
+            <div class="choice-row compact">
+              <button class="choice-tile disabled" disabled>Coming soon</button>
+            </div>
+          </section>
+
+          <section class="wood-panel control-panel">
+            <h2>Mask</h2>
+            <div class="choice-row compact">
+              <button class="choice-tile disabled" disabled>Coming soon</button>
+            </div>
+          </section>
+        </div>
+
+        <section class="color-box-row">
+          <button class="wood-panel color-box" data-color-target="primary">
+            <span class="color-label">Primary</span>
+            <span class="swatch" id="primarySwatch"></span>
+          </button>
+
+          <button class="wood-panel color-box" data-color-target="secondary">
+            <span class="color-label">Secondary</span>
+            <span class="swatch" id="secondarySwatch"></span>
+          </button>
+
+          <button class="wood-panel color-box" data-color-target="tertiary">
+            <span class="color-label">Tertiary</span>
+            <span class="swatch" id="tertiarySwatch"></span>
+          </button>
+
+          <button class="wood-panel color-box" data-color-target="eye">
+            <span class="color-label">Eye Color</span>
+            <span class="swatch" id="eyeSwatch"></span>
+          </button>
+        </section>
       </div>
 
-      <div class="selection-summary">
-        <h2>Your Kitsune</h2>
-        <p id="summaryText"></p>
-      </div>
+      <section class="preview-paper">
+        <h2>Preview</h2>
+        <div class="preview-stage">
+          <div class="placeholder" id="placeholder">
+            <div class="fox">🦊</div>
+            <strong>Preview</strong>
+            <span id="summaryText">Mystic • Three tails</span>
+          </div>
+
+          <img id="tailLayer" class="pet-layer" alt="" />
+        </div>
+
+        <div class="preview-actions">
+          <button id="randomizeBtn" class="paper-btn">↝ Randomize</button>
+          <button id="resetBtn" class="paper-btn">↻ Reset</button>
+        </div>
+      </section>
     </section>
 
-    <section class="controls-card">
-      <div class="control-group">
-        <label for="tailNumber">Tail Number</label>
-        <select id="tailNumber">
-          <option value="three">Three</option>
-          <option value="five">Five</option>
-          <option value="seven">Seven</option>
-          <option value="one">One</option>
-          <option value="nine">Nine</option>
-        </select>
-      </div>
-
-      <div class="control-group">
-        <label for="tailType">Tail Type</label>
-        <select id="tailType">
-          <option value="mystic">Mystic</option>
-          <option value="fateful">Fateful</option>
-          <option value="splendorous">Splendorous</option>
-          <option value="valiant">Valiant</option>
-          <option value="hazy">Hazy</option>
-          <option value="endless">Endless</option>
-        </select>
-      </div>
-
-      <div class="control-group">
-        <label for="pattern">Pattern</label>
-        <select id="pattern">
-          <option value="">Coming soon</option>
-        </select>
-      </div>
-
-      <div class="control-group">
-        <label for="ruff">Ruff</label>
-        <select id="ruff">
-          <option value="">Coming soon</option>
-        </select>
-      </div>
-
-      <div class="control-group">
-        <label for="ears">Ears</label>
-        <select id="ears">
-          <option value="">Coming soon</option>
-        </select>
-      </div>
-
-      <div class="control-group">
-        <label for="mask">Mask</label>
-        <select id="mask">
-          <option value="">Coming soon</option>
-        </select>
-      </div>
-
-      <div class="color-grid">
-        <div class="control-group">
-          <label for="primaryColor">Primary Color</label>
-          <input id="primaryColor" type="color" value="#f4f0c4" />
-        </div>
-
-        <div class="control-group">
-          <label for="secondaryColor">Secondary Color</label>
-          <input id="secondaryColor" type="color" value="#6c35c8" />
-        </div>
-
-        <div class="control-group">
-          <label for="tertiaryColor">Tertiary Color</label>
-          <input id="tertiaryColor" type="color" value="#238f5b" />
-        </div>
-
-        <div class="control-group">
-          <label for="eyeColor">Eye Color</label>
-          <input id="eyeColor" type="color" value="#7a2417" />
-        </div>
-      </div>
-
-      <div class="button-row">
-        <button id="randomizeBtn" class="primary-btn">Randomize</button>
-      </div>
-
-      <p class="helper-text">
-        Image support is already wired in. As we add assets, the preview can load files such as
-        <code>assets/tails/fateful-five.png</code>.
-      </p>
-    </section>
+    <p class="footer-note">Fan-made customizer. Not affiliated with WildWorks or Animal Jam.</p>
   </main>
 
-  <footer>
-    Fan-made customizer. Not affiliated with WildWorks or Animal Jam.
-  </footer>
+  <div class="modal-backdrop" id="colorModal" hidden>
+    <section class="color-modal" role="dialog" aria-modal="true" aria-labelledby="colorModalTitle">
+      <div class="color-modal-header">
+        <h2 id="colorModalTitle">Choose Primary Color</h2>
+        <button id="closeColorModal" class="close-btn" aria-label="Close color picker">×</button>
+      </div>
+
+      <div class="wheel-wrap">
+        <div class="color-wheel" id="colorWheel" aria-label="AJPW-style color palette"></div>
+      </div>
+
+      <div class="color-modal-footer">
+        <span>Selected:</span>
+        <span class="selected-preview" id="selectedPreview"></span>
+        <code id="selectedHex"></code>
+      </div>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>
